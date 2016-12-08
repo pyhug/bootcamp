@@ -1,0 +1,4 @@
+if [ -d "${HOME}/opt/conda3/bin" ]; then
+  namemunge PATH ${HOME}/opt/conda3/bin
+fi
+# vim: set et nobomb fenc=utf8 ft=sh ff=unix sw=2 ts=2:

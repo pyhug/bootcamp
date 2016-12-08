@@ -1,2 +1,4 @@
-Anaconda*.sh
 .vagrant/
+Anaconda*.sh
+Miniconda*.sh
+*.log
