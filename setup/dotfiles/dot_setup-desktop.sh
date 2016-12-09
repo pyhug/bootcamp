@@ -9,7 +9,7 @@ default_profile="${default_profile//\'}"
 default_schema="org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${default_profile}/"
 
 gsettings set ${default_schema} use-system-font false
-gsettings set ${default_schema} font 'Inconsolata Medium 12'
+gsettings set ${default_schema} font 'Inconsolata Medium 16'
 gsettings set ${default_schema} use-theme-colors false
 gsettings set ${default_schema} foreground-color 'rgb(255,255,255)'
 gsettings set ${default_schema} background-color 'rgb(0,0,0)'

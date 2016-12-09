@@ -12,10 +12,6 @@ fi
 
 if [[ `which conda` != "${HOME}/opt/conda3/bin/conda" ]]; then
   bash $workdir/$anaconda -b -p ${HOME}/opt/conda3
-  cat >> $HOME/.bashrc << END
-# add for anaconda install
-PATH=\$HOME/opt/conda3/bin:\$PATH
-END
 fi
 
 # vim: set et nobomb fenc=utf8 ft=sh ff=unix sw=2 ts=2:
