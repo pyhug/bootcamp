@@ -1,14 +1,17 @@
 #!/bin/bash
 
 anaconda=Miniconda3-latest-Linux-x86_64.sh
+workdir=/vagrant/tmp
 
-cd /vagrant
-if [[ ! -f $anaconda ]]; then
-  wget --quiet http://repo.continuum.io/miniconda/$anaconda
+mkdir -p $workdir
+cd $workdir
+
+if [[ ! -f $workdir/$anaconda ]]; then
+  wget --quiet http://repo.continuum.io/miniconda/$anaconda -O $workdir/$anaconda
 fi
 
 if [[ `which conda` != "${HOME}/opt/conda3/bin/conda" ]]; then
-  bash ./$anaconda -b -p ${HOME}/opt/conda3
+  bash $workdir/$anaconda -b -p ${HOME}/opt/conda3
   cat >> $HOME/.bashrc << END
 # add for anaconda install
 PATH=\$HOME/opt/conda3/bin:\$PATH

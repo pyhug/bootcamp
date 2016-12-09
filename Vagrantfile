@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     vb.gui = true
     vb.name = "pybootcamp"
     vb.memory = "2560"
-    vb.customize ["modifyvm", :id, "--vram", "32"]
+    vb.customize ["modifyvm", :id, "--vram", "64"]
     vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
@@ -30,9 +30,9 @@ Vagrant.configure("2") do |config|
   # expose for ipython
   config.vm.network "forwarded_port", guest: 8888, host: 8888, host_ip: 'localhost', protocol: 'tcp', auto_correct: true
 
-  config.vm.provision :shell, path: "bootstrap-install.sh"
-  config.vm.provision :shell, path: "bootstrap-anaconda.sh", privileged: false
-  config.vm.provision :shell, path: "setup-dotfiles.sh", privileged: false
-  config.vm.provision :shell, path: "setup-desktop.sh", privileged: false
+  config.vm.provision :shell, path: "setup/bootstrap-install.sh"
+  config.vm.provision :shell, path: "setup/bootstrap-anaconda.sh", privileged: false
+  config.vm.provision :shell, path: "setup/setup-dotfiles.sh", privileged: false
+  config.vm.provision :shell, path: "setup/setup-desktop.sh", privileged: false
 
 end

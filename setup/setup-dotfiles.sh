@@ -1,5 +1,5 @@
 #!/bin/bash
-SRCDIR=/vagrant/dotfiles
+SRCDIR=/vagrant/setup/dotfiles
 DSTDIR=${HOME}
 
 mkdir ${DSTDIR}/self/etc -p
