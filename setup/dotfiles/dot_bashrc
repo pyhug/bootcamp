@@ -54,13 +54,6 @@ namemunge () {
   eval "export $1"
 }
 
-if [ -n "$DISPLAY" ] && [ -e "${HOME}/.setup-desktop.sh" ]; then
-  bash ${HOME}/.setup-desktop.sh
-  rm -f ${HOME}/.setup-desktop.sh
-else
-  echo "huh"
-fi
-
 #if [ -d "${HOME}/opt/conda3/bin" ]; then
 #  namemunge PATH ${HOME}/opt/conda3/bin
 #fi
