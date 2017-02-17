@@ -27,6 +27,7 @@ def get_content_from_articles(articles, lookingfor):
 if __name__ == '__main__':   
 
     url = 'https://www.ptt.cc/bbs/movie/index.html'
+    back_trace_page_num = 5 
     ctr = 0
     #to pass the age checker
     payload = {
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     #res = rs.get(url, verify=False)
     #print (res.text)
 
-    while (ctr < 5):
+    while (ctr < back_trace_page_num):
         articles, links = process_url(url)
         url = get_prv_page(links)
         get_content_from_articles(articles, '告')
